@@ -1,0 +1,5 @@
+2024-10-21 15:30:15.123 ERROR [com.example.UserService] - NullPointerException: User object is null during login attempt for user 'testuser'.
+    at com.example.UserService.authenticate(UserService.java:78)
+    at com.example.AuthServlet.doPost(AuthServlet.java:45)
+    at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:681)
+    at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:764)

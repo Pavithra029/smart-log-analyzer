@@ -1,0 +1,5 @@
+2025/10/20 10:15:42 [error] 1423#1423: *45 open() "/var/www/html/favicon.ico" failed (2: No such file or directory)
+2025/10/20 10:16:05 [warn] 1423#1423: *46 an upstream response is buffered to a temporary file
+2025/10/20 10:16:22 [error] 1423#1423: *47 connect() failed (111: Connection refused) while connecting to upstream
+2025/10/20 10:17:01 [info] 1423#1423: *48 client closed connection while waiting for request
+2025/10/20 10:18:15 [crit] 1423#1423: *49 SSL_do_handshake() failed

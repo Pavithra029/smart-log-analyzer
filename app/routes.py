@@ -7,12 +7,22 @@ main = Blueprint('main', __name__)
 def index():
     return render_template("index.html")
 
-@main.route("/analyze", methods=["POST"])
+@main.route('/analyze', methods=['POST'])
+
 def analyze():
-    file = request.files.get("file")
-    if not file:
-        return jsonify({"error": "No file uploaded"}), 400
-    
-    log_text = file.read().decode("utf-8")
+    # Check if file part is in request
+    if 'file' not in request.files:
+        return "No file part", 400
+
+    file = request.files['file']
+    if file.filename == '':
+        return "No selected file", 400
+
+    # Read file content
+    log_text = file.read().decode('utf-8', errors='ignore')
+
+    # Analyze
     result = analyze_log(log_text)
+
+    # Return JSON or HTML summary
     return jsonify(result)
